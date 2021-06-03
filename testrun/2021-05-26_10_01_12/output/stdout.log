@@ -1,0 +1,11 @@
+==============================================================================
+Tasks :: Program to build robots and capture the info                         
+==============================================================================
+Build-a-robot                                                         | FAIL |
+Variable '${secret}' not found.
+------------------------------------------------------------------------------
+Tasks :: Program to build robots and capture the info                 | FAIL |
+1 task, 0 passed, 1 failed
+==============================================================================
+Output:  C:\ProgramData\Temp\rcd1f381\AppData\Local\Temp\62_7626_988033699_1\workarea60ae0047\output\output.xml
+Log:     C:\ProgramData\Temp\rcd1f381\AppData\Local\Temp\62_7626_988033699_1\workarea60ae0047\output\log.html

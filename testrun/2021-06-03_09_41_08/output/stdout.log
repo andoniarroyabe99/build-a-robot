@@ -1,0 +1,11 @@
+==============================================================================
+Tasks :: Program to build robots and capture the info                         
+==============================================================================
+Build-a-robot                                                         | FAIL |
+No keyword with name 'a' found.
+------------------------------------------------------------------------------
+Tasks :: Program to build robots and capture the info                 | FAIL |
+1 task, 0 passed, 1 failed
+==============================================================================
+Output:  C:\ProgramData\Temp\rcd1f381\AppData\Local\Temp\46_5965_447413000_1\workarea60b88794\output\output.xml
+Log:     C:\ProgramData\Temp\rcd1f381\AppData\Local\Temp\46_5965_447413000_1\workarea60b88794\output\log.html
