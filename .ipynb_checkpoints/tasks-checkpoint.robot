@@ -3,6 +3,7 @@ Documentation   Program to build robots
 ...             and capture the info
 Library         RPA.Archive
 Library         RPA.Browser.Selenium
+Library         RPA.Dialogs
 Library         RPA.FileSystem
 Library         RPA.HTTP
 Library         RPA.PDF
@@ -11,7 +12,6 @@ Library         RPA.Tables
 
 
 *** Variables ***
-${excelurl}     https://robotsparebinindustries.com/orders.csv
 ${GLOBAL_RETRY_AMOUNT}    4x
 ${GLOBAL_RETRY_INTERVAL}  3s
 ${path}         /html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/select[1]
@@ -27,7 +27,10 @@ Open Browser
 
 *** Keywords ***
 Download File
-    Download  ${excelurl}  overwrite=True  target_file=${CURDIR}
+    Add heading       URL information       size=Large
+    Add text input    message    label=url  placeholder=Enter the URL  rows=3
+    ${result}=  Run Dialog
+    Download  ${result.message}  overwrite=True  target_file=${CURDIR}
 
 *** Keywords ***
 Handle Modal
@@ -35,8 +38,8 @@ Handle Modal
 
 *** Keywords ***
 Saving Screenshots
-    Create Directory            ${CURDIR}/output/screenshots
-    Set Screenshot Directory    ${CURDIR}/output/screenshots
+    Create Directory            ${OUTPUT_DIR}/screenshots
+    Set Screenshot Directory    ${OUTPUT_DIR}/screenshots
 
 *** Keywords ***
 Read File
